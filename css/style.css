@@ -181,31 +181,31 @@ template {
 
 @font-face {
   font-family: "DINRoundPro-Black";
-  src: local("DINRoundPro-Black"), url("../fonts/DINRoundPro-Black.otf") format("opentype");
+  src: local("DINRoundPro-Black"), url("../../fonts/DINRoundPro-Black.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "DINRoundPro-Bold";
-  src: local("DINRoundPro-Bold"), url("../fonts/DINRoundPro-Bold.otf") format("opentype");
+  src: local("DINRoundPro-Bold"), url("../../fonts/DINRoundPro-Bold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "DINRoundPro-Medium";
-  src: local("DINRoundPro-Medium"), url("../fonts/DINRoundPro-Medium.otf") format("opentype");
+  src: local("DINRoundPro-Medium"), url("../../fonts/DINRoundPro-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "DINRoundPro-Regular";
-  src: local("DINRoundPro-Medium"), url("../fonts/DINRoundPro-Regular.otf") format("opentype");
+  src: local("DINRoundPro-Medium"), url("../../fonts/DINRoundPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "DINRoundPro-Light";
-  src: local("DINRoundPro-Light"), url("../fonts/DINRoundPro-Light.otf") format("opentype");
+  src: local("DINRoundPro-Light"), url("../../fonts/DINRoundPro-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
@@ -452,7 +452,7 @@ button {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url("/images/check_img.png") center no-repeat;
+  background: url("../../images/check_img.png") center no-repeat;
 }
 @media screen and (max-width: 500px) {
   .price__itemAvailability:before {
@@ -539,7 +539,7 @@ button {
   padding: 1px 0 1px 55px;
   font-size: 14px;
   color: #090000;
-  background: url("/images/подобрать размер.svg") left no-repeat;
+  background: url("../../images/подобрать размер.svg") left no-repeat;
   border: none;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -730,7 +730,7 @@ button {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  background: url("/images/optiSize-bg.png") center no-repeat;
+  background: url("../../images/optiSize-bg.png") center no-repeat;
   overflow: hidden;
   text-align: center;
   line-height: 150px;
@@ -817,10 +817,10 @@ button {
   cursor: pointer;
 }
 .basket__btn-plus {
-  background: url("/images/plusImg.png") center no-repeat, #fff;
+  background: url("../../images/plusImg.png") center no-repeat, #fff;
 }
 .basket__btn-minus {
-  background: url("/images/minusImg.png") center no-repeat, #fff;
+  background: url("../../images/minusImg.png") center no-repeat, #fff;
 }
 
 .bigButton {
@@ -1121,7 +1121,7 @@ button {
   text-underline-offset: 4px;
   text-decoration-style: dashed;
   text-decoration-thickness: 1px;
-  background: url("/images/product.png") 128px center no-repeat;
+  background: url("../../images/product.png") 128px center no-repeat;
 }
 @media screen and (max-width: 500px) {
   .deliv__table tr:first-child td:first-child {
@@ -1172,10 +1172,10 @@ button {
   }
 }
 .payment__text-check {
-  background: url("/images/кошелек.svg") left center no-repeat;
+  background: url("../../images/кошелек.svg") left center no-repeat;
 }
 .payment__text-return {
-  background: url("/images/календарь.svg") left center no-repeat;
+  background: url("../../images/календарь.svg") left center no-repeat;
 }
 
 .call {
@@ -1228,7 +1228,7 @@ button {
   font-size: 14px;
   color: #ff9600;
   padding-left: 20px;
-  background: url("/images/roundedArrow_img.png") left center no-repeat;
+  background: url("../../images/roundedArrow_img.png") left center no-repeat;
   text-decoration: none;
 }
 @media screen and (max-width: 500px) {

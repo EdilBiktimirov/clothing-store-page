@@ -78,7 +78,7 @@
         text-underline-offset: 4px;
         text-decoration-style: dashed;
         text-decoration-thickness: 1px;
-        background: url("/images/product.png") 128px center no-repeat;
+        background: url("../../images/product.png") 128px center no-repeat;
 
         @include sm {
             background-position: 109px center;
