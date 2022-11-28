@@ -1,0 +1,25 @@
+@use "../var/colors"as *;
+@use "../var/mixins"as *;
+
+.infoBlock {
+  display: flex;
+  position: relative;
+
+  @include lg {
+    flex-direction: column;
+  }
+
+  @include sm {
+    padding-top: 16px;
+    border-top: 1px dashed #c1c1c1;
+  }
+
+  &__box {
+    flex-basis: 48%;
+    margin-right: 68px;
+
+    @include lg {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин одежды</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./app/jquery-3.6.1.min.js" type="text/javascript"></script>
+    <script src="./app/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <main class="mainBlock">
+                <div class="mainImgBox">
+                    <div class="mainImgBox__item">
+                        <img class="mainImgBox__img" alt="Одежда" src="uploads/kengurumi_img1.jpg" width="394"
+                            height="536">
+                        <span class="mainImgBox__new">NEW!</span>
+                    </div>
+                    <div class="mainImgBox__radioBox">
+                        <label class="mainImgBox__radioLabel">
+                            <input class="mainImgBox__radio" id="radio1" type="radio" name="kengurumi" value="keng1"
+                                checked />
+                            <span class="mainImgBox__radioInput ">
+                                <img class="mainImgBox__imgS" src="/images/kenguruS-1.png" />
+                            </span>
+                        </label>
+                        <label class="mainImgBox__radioLabel">
+                            <input class="mainImgBox__radio" id="radio2" type="radio" name="kengurumi" value="keng2" />
+                            <span class="mainImgBox__radioInput">
+                                <img class="mainImgBox__imgS" src="/images/kenguruS-2.png" />
+                            </span>
+                        </label>
+                        <label class="mainImgBox__radioLabel">
+                            <input class="mainImgBox__radio" id="radio3" type="radio" name="kengurumi" value="keng3" />
+                            <span class="mainImgBox__radioInput">
+                                <img class="mainImgBox__imgS" src="/images/kenguruS-3.png" />
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mainBlock__box">
+                    <form method="post">
+                        <div class="price">
+                            <div class="price__infoBox">
+                                <p class="price__old">3700 <span>&#8381</span></p>
+                                <h3 class="price__current">2 290 &#8381</h3>
+                                <p class="price__saving"></p>
+                                <p class="price__discount"></p>
+                            </div>
+                            <div class="price__availabilityBox">
+                                <p class="price__itemCode">Код товара:<input class="price__itemCodeArtc" type="text"
+                                        readonly>
+                                </p>
+                                <p class="price__itemAvailability">На складе много</p>
+                                <p class="price__itemSearch">Нашли дешевле? <strong>Cнизим цену!</strong></p>
+                            </div>
+                        </div>
+                        <div class="size">
+                            <span class="size__title">Выберите размер</span>
+                            <div class="size__box">
+                                <button class="roundedBtn  roundedBtn-active" type="button" id="btn-s">S</button>
+                                <button class="roundedBtn" type="button" id="btn-m">M</button>
+                                <button class="roundedBtn" type="button" id="btn-l">L</button>
+                                <button class="roundedBtn roundedBtn-disable" type="button" id="btn-xl">XL</button>
+                                <button class="roundedBtn roundedBtn-disable" type="button" id="btn-xxl">XXL</button>
+                                <button class="size__btnChooseSize" type="button">Подобрать оптимальный размер</button>
+                            </div>
+                            <div class="size__opti">
+                                <button class="size__btnClose" type="button">x</button>
+                                <h3 class="size__titleOpti">Подобрать оптимальный размер</h3>
+                                <div class="size__optiContainer">
+                                    <div class="size__optiBox1">
+                                        <p class="size__optiText">Не уверены, какой размер подойдет именно вам?
+                                            Просто укажите свой рост и вес и вы узнаете свой размер.</p>
+                                        <div class="size__optiItem1">
+                                            <span class="size__optiHText">Рост, см</span>
+                                            <span class="size__optiHeight">0</span>
+                                            <input class="size__rangeHeight" type="range" min="145" max="200"
+                                                value="0" />
+                                        </div>
+                                        <div class="size__optiItem2">
+                                            <span class="size__optiHText">Вес, кг</span>
+                                            <span class="size__optiWeight">0</span>
+                                            <input class="size__rangeWeight" type="range" min="40" max="120"
+                                                value="0" />
+                                        </div>
+                                    </div>
+                                    <div class="size__optiBox2">
+                                        <h5 class="size__optiSize">Ваш оптимальный размер:</h5>
+                                        <span class="size__optiInfo">S</span>
+                                    </div>
+                                </div>
+                                <button class="size__btn bigButton bigButton-red" type="button">Выбрать</button>
+                            </div>
+                            <div class="size__backdrop"></div>
+                        </div>
+                        <div class="basket">
+                            <div class="basket__amount">
+                                <button class="basket__btn basket__btn-minus" type="button"></button>
+                                <span class="basket__count">1</span>
+                                <button class="basket__btn basket__btn-plus" type="button"></button>
+                            </div>
+                            <div class="basket__basketBox">
+                                <button class="bigButton bigButton-red" type="submit" id="basketBtn">В корзину</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="order">
+                        <h3 class="order__title">Быстрый заказ</h3>
+                        <p class="order__descr">Вы можете на заполнять никаких форм, просто оставьте свой телефон
+                            и наш менеджер свяжется с вами</p>
+                        <div class="order__orderBox">
+                            <input class="order__phone" type="text" name="phone" id="phone"
+                                placeholder="+7 (___) ___-__-__">
+                            <button class="bigButton bigButton-yellow" type="button">Заказать в один клик</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="infoBlock">
+                <div class="infoBlock__box">
+                    <div class="deliv">
+                        <div class="deliv__box">
+                            <span class="deliv__text">Регион доставки:</span>
+                            <select class="deliv__region">
+                                <option value="krasnodar">Краснодар</option>
+                                <option value="moskva">Москва</option>
+                                <option value="voronezh">Воронеж</option>
+                                <option value="sankt-peterburg">Санкт-Петербург</option>
+                                <option value="novosibirsk">Новосибирск</option>
+                                <option value="sochi">Сочи</option>
+                            </select>
+                        </div>
+                        <table class="deliv__table">
+                            <tr>
+                                <td><a href="#">Пункт самовывоза</a></td>
+                                <td>2 дня</td>
+                                <td>165 Р</td>
+                            </tr>
+                            <tr>
+                                <td>Курьером</td>
+                                <td>2 дня</td>
+                                <td>305 Р</td>
+                            </tr>
+                            <tr>
+                                <td>Почта России</td>
+                                <td>5-14 дней</td>
+                                <td>250 Р</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="payment">
+                        <div class="payment__box">
+                            <span class="payment__text payment__text-check">Оплата после проверки</span>
+                        </div>
+                        <div class="payment__box">
+                            <span class="payment__text payment__text-return">14 дней на возврат</span>
+                        </div>
+                    </div>
+                    <div class="call">
+                        <div class="call__box1">
+                            <span class="call__quest">Есть вопросы?</span>
+                            <span class="call__callUs">Звоните!</span>
+                        </div>
+                        <div class="call__box2">
+                            <span class="call__number">8 (495) 105-98-18</span>
+                            <a class="call__order" href="#">Зaказать обратный звонок</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <ul class="tabs__list">
+                        <li class="tabs__tab tabs__tabActive">Описание</li>
+                        <li class="tabs__tab">Характеристики</li>
+                    </ul>
+                    <div class="tabs__contentBox">
+                        <div class="tabs__content tabs__contentActive">
+                            <p class="tabs__text">
+                                Помните веселого персонажа из мультфильма про кунг-фу? Энергичный, немного глуповатый и
+                                малость
+                                невезучий, По доказал каждому, что его возможности безграничны. Пожалуй, эта панда –
+                                настоящий
+                                символ настойчивости и упорства. Мы предлагаем вам облачиться в нежную черно-белую
+                                шерстку,
+                                которая так и просит «обними меня!».</p>
+                            <p class="tabs__text">
+                                Костюм мастера кунг-фу изготовлен из велсофта. Это позволяет коже дышать и не потеть,
+                                даже
+                                если
+                                вам предстоит веселить своих друзей весь день. Пижама застегивается на пуговички и
+                                плотно
+                                прилегает к рукам и ногам в области манжетов. Голову прикрывает яркая мордочка с ушками,
+                                которая
+                                завершает образ.</p>
+                            <p class="tabs__text">
+                                Панды – ленивые создания, но очень притягательные. Вам будет сложно отказать в объятиях.
+                                Почему
+                                бы не воспользоваться этой особенностью с пользой для себя? В таком костюме не важно,
+                                где
+                                именно
+                                будет ваша вечеринка. Главное то, что никто на ней вас точно не забудет.</p>
+                        </div>
+                        <div class="tabs__content">
+                            <p class="tabs__text">
+                                Костюм мастера кунг-фу изготовлен из велсофта. Это позволяет коже дышать и не потеть,
+                                даже
+                                если
+                                вам предстоит веселить своих друзей весь день. Пижама застегивается на пуговички и
+                                плотно
+                                прилегает к рукам и ногам в области манжетов. Голову прикрывает яркая мордочка с ушками,
+                                которая
+                                завершает образ.</p>
+                            <p class="tabs__text">
+                                Панды – ленивые создания, но очень притягательные. Вам будет сложно отказать в объятиях.
+                                Почему
+                                бы не воспользоваться этой особенностью с пользой для себя? В таком костюме не важно,
+                                где
+                                именно
+                                будет ваша вечеринка. Главное то, что никто на ней вас точно не забудет.</p>
+                            <p class="tabs__text">
+                                Помните веселого персонажа из мультфильма про кунг-фу? Энергичный, немного глуповатый и
+                                малость
+                                невезучий, По доказал каждому, что его возможности безграничны. Пожалуй, эта панда –
+                                настоящий
+                                символ настойчивости и упорства. Мы предлагаем вам облачиться в нежную черно-белую
+                                шерстку,
+                                которая так и просит «обними меня!».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

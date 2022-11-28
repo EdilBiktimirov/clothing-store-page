@@ -1,0 +1,82 @@
+@use "../var/colors"as *;
+@use "../var/mixins"as *;
+
+.tabs {
+    flex-basis: 75%;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        top: -13px;
+        left: 42%;
+        margin: 0;
+
+        @include lg {
+            top: 357.5px;
+            left: -1%;
+        }
+
+        @include sm {
+            top: 345px;
+            left: -1%;
+        }
+    }
+
+    &__tab {
+        font-family: "DINRoundPro-Black";
+        display: inline-block;
+        font-size: 26px;
+        color: #928d81;
+        padding: 8px 10px 8px 21px;
+        cursor: pointer;
+
+        @include sm {
+            font-size: 14px;
+            padding: 8px 18px 8px 21px;
+        }
+    }
+
+    &__tabActive {
+        font-family: "DINRoundPro-Black";
+        border: 1px solid #cfcfcf;
+        box-shadow: 0px -3px 8px 0px rgba(116, 116, 116, 0.14);
+        border-bottom: none;
+        border-radius: 19px 19px 0 0;
+        font-size: 26px;
+        color: $black;
+        background: $white;
+
+        @include sm {
+            font-size: 14px;
+            padding: 8px 18px 8px 21px;
+        }
+    }
+
+    &__content {
+        font-family: "DINRoundPro-Regular";
+        display: none;
+        font-size: 16px;
+        line-height: 1.625;
+        color: #898484;
+        padding-top: 20px;
+
+        @include sm {
+            font-size: 14px;
+            line-height: 1.571;
+        }
+    }
+
+    &__contentActive {
+        display: inline-block;
+    }
+
+    &__contentBox {
+        border-top: 1px solid #cfcfcf;
+        margin-top: 37px;
+    }
+
+    &__text {
+        margin: 0 0 26px;
+    }
+}

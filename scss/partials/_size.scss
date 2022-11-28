@@ -1,0 +1,275 @@
+@use "../var/colors"as *;
+@use "../var/mixins"as *;
+
+.size {
+    position: relative;
+    margin-bottom: 48px;
+
+    @include xsm {
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #dcdcdc;
+        padding: 18px 0 16px;
+        z-index: 0;
+
+        @include xsm {
+            padding: 18px 0 14px;
+        }
+    }
+
+    &__title {
+        font-family: "DINRoundPro-Medium";
+        font-size: 14px;
+        color: #8d8989;
+        display: block;
+        position: absolute;
+        top: -11px;
+        left: 0px;
+        width: 120px;
+        background: $white;
+
+        @include xsm {
+            font-size: 12px;
+            top: -9px;
+            left: 0px;
+        }
+    }
+
+    &__btnChooseSize {
+        font-family: "DINRoundPro-Medium";
+        max-width: 200px;
+        text-align: left;
+        padding: 1px 0 1px 55px;
+        font-size: 14px;
+        color: #090000;
+        background: url("/images/подобрать\ размер.svg") left no-repeat;
+        border: none;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+        margin-top: -7px;
+
+        @include sm {
+            font-size: 12px;
+            max-width: 190px;
+        }
+
+        @include xsm {
+            margin-top: 13px;
+        }
+    }
+
+    &__opti {
+        border: 1px solid #dcdcdc;
+        border-radius: 15px;
+        padding: 20px 40px 20px 40px;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+        text-align: center;
+        padding: 30px;
+        background-color: #fff;
+        transition: 0.3s all;
+
+        @include md {
+            padding: 10px 10px;
+        }
+
+        @include sm {
+            width: 310px;
+            height: auto;
+        }
+    }
+
+    &__backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+        transition: .3s all;
+    }
+
+    &__optiContainer {
+        display: flex;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #dcdcdc;
+
+        @include md {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__optiBox1 {
+        margin-right: 20px;
+
+        @include sm {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__optiItem1 {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    &__optiItem2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    &__optiHeight,
+    &__optiWeight {
+        font-family: "DINRoundPro-Bold";
+        font-size: 24px;
+        color: #171000;
+        border: 1px solid #dcdcdc;
+        border-radius: 20px;
+        padding: 5px 12px;
+        min-width: 75px;
+        min-height: 50px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 5px;
+
+        @include sm {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__optiHText {
+        font-family: "DINRoundPro-Medium";
+        display: block;
+        font-size: 14px;
+        color: #000007;
+        margin: 0 5px 3px 20px;
+        width: 60px;
+
+
+        @include md {
+            margin: 0 5px 3px 0;
+        }
+
+        @include sm {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__rangeHeight,
+    &__rangeWeight {
+        -webkit-appearance: none;
+        width: 80%;
+        height: 15px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        display: inline-block;
+    }
+
+    &__rangeWeight::-webkit-slider-thumb,
+    &__rangeHeight::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #ec9508e7;
+        cursor: pointer;
+    }
+
+    &__titleOpti {
+        font-family: "DINRoundPro-Black";
+        font-size: 26px;
+        color: $black;
+
+        @include md {
+            font-size: 18px;
+        }
+    }
+
+    &__optiText {
+        font-family: "DINRoundPro-Regular";
+        font-size: 14px;
+        color: #898484;
+        line-height: 1.4;
+        margin: 0 0 25px 0;
+        max-width: 75%;
+
+        @include md {
+            max-width: 100%;
+            margin: 0 auto 10px;
+        }
+    }
+
+    &__optiSize {
+        font-family: "DINRoundPro-Medium";
+        font-size: 16px;
+        margin: 0 0 23px 0;
+        color: $black;
+        text-align: center;
+    }
+
+    &__optiInfo {
+        font-family: "DINRoundPro-Black";
+        display: block;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        background: url("/images/optiSize-bg.png") center no-repeat;
+        overflow: hidden;
+        text-align: center;
+        line-height: 150px;
+        color: $white;
+        font-size: 61px;
+
+        @include md {
+            margin: auto;
+        }
+    }
+
+    &__btn {
+        margin: 30px auto 12px auto;
+        display: block;
+    }
+
+    &__btnClose {
+        display: block;
+        background-color: #ff1541;
+        color: $white;
+        width: 35px;
+        height: 35px;
+        margin-left: auto;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+}

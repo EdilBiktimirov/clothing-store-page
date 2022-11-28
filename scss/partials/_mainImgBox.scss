@@ -1,0 +1,110 @@
+@use "../var/colors"as *;
+@use "../var/mixins"as *;
+
+.mainImgBox {
+    position: relative;
+
+    @include lg {
+        text-align: center;
+    }
+
+    &__img {
+        border: 1px solid #e7e7e7;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @include md {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__item {
+        max-width: 394px;
+        margin: auto;
+        position: relative;
+    }
+
+    &__new {
+        text-align: center;
+        font-family: "DINRoundPro-Bold";
+        display: none;
+        width: 45px;
+        height: 21px;
+        color: $white;
+        font-size: 14px;
+        line-height: 21px;
+        border-radius: 4px;
+        background: #7ac00c;
+        position: absolute;
+        top: 11px;
+        left: 11px;
+
+        @include md {
+            display: block;
+        }
+    }
+
+    &__radioBox {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -33px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include md {
+            flex-direction: row;
+            top: 92%;
+            right: 50%;
+            transform: translate(50%);
+        }
+    }
+
+    &__radio {
+        display: none;
+    }
+
+    &__radioInput {
+        cursor: pointer;
+        margin-bottom: 10px;
+        position: relative;
+        transition: all ease 250ms;
+        display: block;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        overflow: hidden;
+        box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.22);
+
+        @include lg {
+            margin: 10px 0 0;
+        }
+
+        @include md {
+            margin: 0 10px 0;
+        }
+
+        @include sm {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__radioLabel:hover &__radioInput {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &__imgS {
+        width: 70px;
+        height: auto;
+
+        @include sm {
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    &__radio:checked+&__radioInput {
+        border: 5px solid #f0b328;
+    }
+}

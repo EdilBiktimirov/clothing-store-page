@@ -1,0 +1,49 @@
+@use "../var/colors"as *;
+@use "../var/mixins"as *;
+
+.basket {
+  display: flex;
+  justify-content: space-between;
+  background: #ebebeb;
+  padding-left: 13px;
+  border-radius: 25px;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @include xsm {
+    padding-left: 8px;
+    margin-bottom: 25px;
+  }
+
+  &__amount {
+    display: flex;
+    align-items: center;
+  }
+
+  &__count {
+    font-family: "DINRoundPro-Black";
+    margin: 0 25px;
+    font-size: 18px;
+    color: $black;
+
+    @include xsm {
+      margin: 0 15px;
+    }
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dedede;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  &__btn-plus {
+    background: url('/images/plusImg.png') center no-repeat, $white;
+  }
+
+  &__btn-minus {
+    background: url('/images/minusImg.png') center no-repeat, $white;
+  }
+}

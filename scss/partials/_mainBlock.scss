@@ -1,0 +1,24 @@
+@use "../var/colors"as *;
+@use "../var/mixins"as *;
+
+.mainBlock {
+  display: flex;
+  margin-bottom: 46px;
+
+  @include md {
+    flex-direction: column;
+  }
+
+  @include sm {
+    margin-bottom: 25px;
+  }
+
+  &__box {
+    flex-grow: 1;
+    margin-left: 81px;
+
+    @include md {
+      margin-left: 0;
+    }
+  }
+}

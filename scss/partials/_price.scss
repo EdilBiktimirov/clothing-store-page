@@ -1,0 +1,197 @@
+@use "../var/colors"as *;
+@use "../var/mixins"as *;
+
+
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 37px;
+
+  @include md {
+    margin: 55px 0 37px 0;
+    border-top: 1px dashed #c1c1c1;
+    padding-top: 20px;
+  }
+
+  @include sm {
+    margin: 39px 0 22px 0;
+    padding-top: 11px;
+  }
+
+  &__infoBox {
+    position: relative;
+    margin-top: 7px;
+  }
+
+  &__old {
+    font-family: "DINRoundPro-Bold";
+    color: $gray;
+    font-size: 18px;
+    margin: 0;
+    text-decoration: line-through;
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+
+  &__current {
+    color: $black;
+    font-size: 40px;
+    margin: 0;
+    font-family: 'DINRoundPro-Black';
+
+    @include sm {
+      font-size: 26px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__saving {
+    font-family: "DINRoundPro-Bold";
+    color: $red;
+    font-size: 18px;
+    margin: 0;
+    margin-top: -5px;
+
+    @include sm {
+      font-size: 16px;
+      max-width: 80%;
+      line-height: 0.8;
+    }
+  }
+
+  &__saving span {
+    font-family: "DINRoundPro-Black";
+    color: $black;
+    font-size: 14px;
+
+    @include sm {
+      font-size: 12px;
+    }
+  }
+
+  &__discount {
+    font-family: "DINRoundPro-Black";
+    font-size: 22.13px;
+    color: $white;
+    position: absolute;
+    right: -110px;
+    top: -15px;
+    text-align: center;
+    width: 83px;
+    height: 80px;
+    background: url("/images/скидка.svg") center no-repeat;
+    background-size: contain;
+    line-height: 80px;
+
+    @include xlg {
+      right: -91px;
+      top: -15px;
+    }
+
+    @include sm {
+      font-size: 16px;
+      line-height: 55px;
+      width: 55px;
+      height: 55px;
+      right: 2px;
+      top: 26px;
+    }
+  }
+
+
+  &__availabilityBox {
+    text-align: right;
+
+    @include xsm {
+      text-align: left;
+      flex-basis: 49%;
+    }
+  }
+
+  &__itemCode {
+    font-family: "DINRoundPro-Medium";
+    color: $darkGrey;
+    font-size: 12px;
+
+    @include xsm {
+      margin: 4px 0 8px;
+    }
+  }
+
+  &__itemCodeArtc {
+    font-family: "DINRoundPro-Medium";
+    width: 55px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #cfcfcf;
+    font-size: 14px;
+    margin-left: 13px;
+    text-align: center;
+    color: $black;
+
+    @include sm {
+      margin-left: 3px;
+      padding: 2px;
+    }
+  }
+
+  &__itemAvailability {
+    font-family: "DINRoundPro-Medium";
+    color: $darkGrey;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+
+    @include xsm {
+      margin: 10px 0 10px 20px;
+    }
+  }
+
+  &__itemAvailability:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 80px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("/images/check_img.png") center no-repeat;
+
+    @include sm {
+      top: -3px;
+      left: 60px;
+    }
+
+    @include xsm {
+      top: -3px;
+      left: -22px;
+    }
+  }
+
+  &__itemSearch {
+    font-family: "DINRoundPro-Medium";
+    color: #888585;
+    font-size: 14px;
+
+    @include sm {
+      font-size: 12px;
+    }
+  }
+
+  &__itemSearch strong {
+    font-family: "DINRoundPro-Medium";
+    color: $black;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+
+    @include sm {
+      font-size: 12px;
+    }
+  }
+}
